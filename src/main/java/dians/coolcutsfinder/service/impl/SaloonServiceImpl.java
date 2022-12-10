@@ -29,8 +29,8 @@ public class SaloonServiceImpl implements SaloonService {
     }
 
     @Override
-    public Optional<Saloon> getSaloonById(Long id) {
-        return saloonRepository.findById(id);
+    public Saloon getSaloonById(Long id) {
+        return saloonRepository.findSaloonById(id);
     }
 
     @Override

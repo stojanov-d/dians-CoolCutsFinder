@@ -3,7 +3,6 @@ package dians.coolcutsfinder.service;
 import dians.coolcutsfinder.model.Saloon;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface SaloonService {
 
@@ -11,7 +10,7 @@ public interface SaloonService {
 
     List<Saloon> getAllSaloons();
 
-    Optional<Saloon> getSaloonById(Long id);
+    Saloon getSaloonById(Long id);
 
     Saloon getSaloonByName(String name);
 

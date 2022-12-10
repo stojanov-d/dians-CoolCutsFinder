@@ -8,4 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface SaloonRepository extends JpaRepository<Saloon,Long> {
 
     Saloon findSaloonByName(String name);
+    Saloon findSaloonById(Long id);
 }

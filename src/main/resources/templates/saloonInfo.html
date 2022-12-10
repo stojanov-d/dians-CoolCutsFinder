@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Registration and Login System</title>
@@ -26,21 +26,12 @@
 </nav>
 
 <div class="row">
-    <div class="col-5">
-        <div class="list-group" th:each="saloon:${saloons}">
-            <a th:href="@{'/saloons/{id}' (id=${saloon.getId()})}" class="list-group-item list-group-item-action active p-3 m-3" aria-current="true">
-                <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">
-                        <th:block th:text="${saloon.getName()}"></th:block>
-                    </h5>
-                    <small>3 days ago</small>
-                </div>
-                <p class="mb-1">Some placeholder content in a paragraph.</p>
-                <small>And some small print.</small>
-            </a>
-        </div>
+    <div class="col-auto p-4 m-1">
+        <h2>Saloon name:</h2>
+        <h4><th:block th:text="${saloon.getName()}"></th:block></h4>
+        <h2>Saloon address:</h2>
+        <h4><th:block th:text="${saloon.getAddress()}"></th:block></h4>
     </div>
 </div>
-
 </body>
 </html>
